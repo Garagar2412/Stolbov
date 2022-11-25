@@ -1,13 +1,13 @@
 import csv
-from openpyxl import Workbook
-from openpyxl.utils import get_column_letter
-from openpyxl.styles import Font, Border, Side
+import pathlib
+
 import matplotlib.pyplot as plt
 import numpy as np
-from jinja2 import Environment, FileSystemLoader
-import pathlib
 import pdfkit
-
+from jinja2 import Environment, FileSystemLoader
+from openpyxl import Workbook
+from openpyxl.styles import Font, Border, Side
+from openpyxl.utils import get_column_letter
 
 class InCon:
     def __init__(self):
@@ -18,12 +18,11 @@ class InCon:
         stats1, stats2, stats3, stats4, stats5, stats6 = dataset.get_statistic()
         dataset.print_statistic(stats1, stats2, stats3, stats4, stats5, stats6)
 
-        report = Statement(self.vacancy_name, stats1, stats2, stats3, stats4, stats5, stats6)
-        report.generate_excel()
+        report = Report(self.vacancy_name, stats1, stats2, stats3, stats4, stats5, stats6)
         report.generate_image()
         report.generate_pdf()
 
-class Statement:
+class Report:
     def __init__(self, vacancy_name, stats1, stats2, stats3, stats4, stats5, stats6):
         self.wb = Workbook()
         self.vacancy_name = vacancy_name
@@ -130,7 +129,7 @@ class Statement:
         plt.savefig('graph.png')
 
     def generate_pdf(self):
-        env = Environment(loader=FileSystemLoader('../templates'))
+        env = Environment(loader=FileSystemLoader('.'))
         template = env.get_template("pdf_template.html")
         stats = []
         for year in self.stats1.keys():
@@ -140,12 +139,21 @@ class Statement:
             self.stats6[key] = round(self.stats6[key] * 100, 2)
 
         pdf_template = template.render({'name': self.vacancy_name, 'path': '{0}/{1}'.format(pathlib.Path(__file__).parent.resolve(), 'graph.png'), 'stats': stats, 'stats5': self.stats5, 'stats6': self.stats6})
-        pdfkit.from_string(pdf_template, 'report.pdf', options={"enable-local-file-access": ""})
+        config = pdfkit.configuration(wkhtmltopdf=r'D:\Games\wkhtmltopdf\bin\wkhtmltopdf.exe')
+        pdfkit.from_string(pdf_template, 'report.pdf', configuration=config,  options={"enable-local-file-access": None})
 
 class Vacancy:
     currency_to_rub = {
-        "AZN": 35.68, "BYR": 23.91, "EUR": 59.90, "GEL": 21.74, "KGS": 0.76,
-        "KZT": 0.13, "RUR": 1, "UAH": 1.64, "USD": 60.66, "UZS": 0.0055,
+        "AZN": 35.68,
+        "BYR": 23.91,
+        "EUR": 59.90,
+        "GEL": 21.74,
+        "KGS": 0.76,
+        "KZT": 0.13,
+        "RUR": 1,
+        "UAH": 1.64,
+        "USD": 60.66,
+        "UZS": 0.0055,
     }
 
     def __init__(self, vacancy):
