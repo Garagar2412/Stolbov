@@ -12,4 +12,9 @@
 ![wD9YZ3sIHkU](https://user-images.githubusercontent.com/104669372/208176879-09422abf-f216-4c44-8369-c7841dea24f3.jpg)
 ![GbQxtu-7t_k](https://user-images.githubusercontent.com/104669372/208176881-37b82e87-bc61-4056-afc0-69d0eba0df9d.jpg)
 
-Итог:функция slice_test показала лучший результат
+Итог: функция slice_test показала лучший результат
+
+Разделенные csv-файлы
+
+![BN3a2Gd9bjg](https://user-images.githubusercontent.com/104669372/209862024-5fa34c5e-bc4e-4b9e-a3d3-b54f4a877687.jpg)
+
