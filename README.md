@@ -26,3 +26,11 @@
 3.2.3:
 
 ![nvjErxPh_Lw](https://user-images.githubusercontent.com/104669372/209866120-c09d7708-b310-4448-87f4-e3bde50d2a0b.jpg)
+
+3.3.1 Частотность 
+
+![9-e4D1jENLw](https://user-images.githubusercontent.com/104669372/210076923-e2017cae-f128-42d0-beff-663bf89f78b8.jpg)
+
+3.3.1 Разделенные новые файлы
+
+![KG1fU5uBaew](https://user-images.githubusercontent.com/104669372/210078566-25f8dc6a-b691-46aa-8650-db83c808fd71.jpg)
