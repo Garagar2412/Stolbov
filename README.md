@@ -34,3 +34,15 @@
 3.3.1 Разделенные новые файлы
 
 ![KG1fU5uBaew](https://user-images.githubusercontent.com/104669372/210078566-25f8dc6a-b691-46aa-8650-db83c808fd71.jpg)
+
+3.5.2
+
+![DFHyzV2Yixo (1)](https://user-images.githubusercontent.com/104669372/210136607-5c4344d2-5275-4099-b806-c24e64cb82e1.jpg)
+
+
+3.5.3
+![RU3dMRmbS3s](https://user-images.githubusercontent.com/104669372/210136549-53f01fb3-e317-46d0-8e9a-68e5f4c526d5.jpg)
+![LmtHAJZdmtg](https://user-images.githubusercontent.com/104669372/210136552-cdc77865-e4f8-4693-a60b-e93c7f459dd7.jpg)
+![VsXU-xcmRz8](https://user-images.githubusercontent.com/104669372/210136555-8f72aa02-abd5-4918-b58e-a3c6ad18cd8f.jpg)
+![8vsiQWUxX5w](https://user-images.githubusercontent.com/104669372/210136560-7ad92e77-c541-491c-8cf0-597743580c78.jpg)
+![jZ5Woul0cbE](https://user-images.githubusercontent.com/104669372/210136562-5fc8fd81-42a2-425b-9dd4-3daf66fd3412.jpg)

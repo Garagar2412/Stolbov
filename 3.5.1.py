@@ -1,13 +1,9 @@
-import numpy as np
-import pandas as pd
 import sqlite3
+import pandas as pd
 
-def get_sql_table():
-    """
-    Переводит введный csv-файл в таблицу sqlite.
-    """
-    df = pd.read_csv(input('Файл с валютами: '))
-    conn = sqlite3.connect('valCurs.sqlite')
-    df.to_sql('valCurs', conn, if_exists='replace', index=False)
+pd.set_option("expand_frame_repr", False)
+df = pd.read_csv("currencies.csv")
 
-get_sql_table()
+# Работа с базой данных
+con = sqlite3.connect("currencies.db")
+df.to_sql("currencies", con, if_exists="replace", index=False)
